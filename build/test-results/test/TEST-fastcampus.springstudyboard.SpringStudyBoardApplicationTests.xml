@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fastcampus.springstudyboard.SpringStudyBoardApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-22T02:40:14" hostname="jeongsoiui-iMac.local" time="0.376">
+  <properties/>
+  <testcase name="contextLoads()" classname="fastcampus.springstudyboard.SpringStudyBoardApplicationTests" time="0.376"/>
+  <system-out><![CDATA[11:40:11.439 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [fastcampus.springstudyboard.SpringStudyBoardApplicationTests]: SpringStudyBoardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:40:11.484 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration fastcampus.springstudyboard.SpringStudyBoardApplication for test class fastcampus.springstudyboard.SpringStudyBoardApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-06-22T11:40:11.686+09:00  INFO 52498 --- [    Test worker] f.s.SpringStudyBoardApplicationTests     : Starting SpringStudyBoardApplicationTests using Java 17.0.11 with PID 52498 (started by jeongsoi in /Users/jeongsoi/Desktop/spring_board/spring-study-board)
+2024-06-22T11:40:11.687+09:00  INFO 52498 --- [    Test worker] f.s.SpringStudyBoardApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2024-06-22T11:40:12.077+09:00  INFO 52498 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-22T11:40:12.086+09:00  INFO 52498 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2024-06-22T11:40:12.346+09:00  INFO 52498 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-22T11:40:12.379+09:00  INFO 52498 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-22T11:40:12.397+09:00  INFO 52498 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-22T11:40:12.533+09:00  INFO 52498 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-22T11:40:12.546+09:00  INFO 52498 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-22T11:40:13.244+09:00  INFO 52498 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3636f2a7
+2024-06-22T11:40:13.246+09:00  INFO 52498 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-22T11:40:13.480+09:00  INFO 52498 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-22T11:40:13.483+09:00  INFO 52498 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-22T11:40:13.644+09:00 DEBUG 52498 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-06-22T11:40:13.733+09:00 DEBUG 52498 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-22T11:40:13.758+09:00 DEBUG 52498 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-22T11:40:13.779+09:00 DEBUG 52498 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-22T11:40:14.118+09:00  INFO 52498 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoints beneath base path '/actuator'
+2024-06-22T11:40:14.168+09:00  INFO 52498 --- [    Test worker] f.s.SpringStudyBoardApplicationTests     : Started SpringStudyBoardApplicationTests in 2.612 seconds (process running for 3.199)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
