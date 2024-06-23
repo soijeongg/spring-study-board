@@ -1,5 +1,6 @@
 package fastcampus.springstudyboard.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -48,7 +49,8 @@ public class Article {
 
     @ToString.Exclude
     @OrderBy("id")
-    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
     private final Set<Comment> Comments = new LinkedHashSet<>();
 
     @CreatedDate
@@ -56,24 +58,17 @@ public class Article {
     private LocalDateTime createdAt;
 
     @CreatedBy
-    @Column(nullable = false)
+    @Column(nullable = false, updatable = false)
     private String createdBy;
 
     @LastModifiedDate
-    @Column(nullable = false)
+    @Column(nullable = false,updatable = false)
     private LocalDateTime modifiedAt;
 
     @LastModifiedBy
     @Column(nullable = false)
     private  String modifiedBy;
 
-    @UpdateTimestamp
-    @Column(nullable = false)
-    private  LocalDateTime updatedAt;
-
-    @Setter
-    @Column(nullable = false)
-    private  String updatedBy;
 
     protected Article(String title,String content, Integer viewCount, String hashtag) {
         this.title = title;
@@ -90,8 +85,23 @@ public class Article {
     public  static Article of(String title, String content, Integer viewCount, String hashtag) {
         return new Article(title,content,viewCount,hashtag);
     }
+    @PrePersist
+    public void prePersist() {
+        LocalDateTime now = LocalDateTime.now();
+        this.createdAt = now;
+        this.modifiedAt = now;
+        this.createdBy = "defaultUser";
+        this.modifiedBy = "defaultUser";
 
-    @Override
+        // createdBy와 updatedBy는 현재 인증된 사용자 정보로 설정해야 합니다.
+    }
+    @PreUpdate
+    public void preUpdate() {
+        this.modifiedAt = LocalDateTime.now();
+        this.modifiedBy = "defaultUser";
+    }
+
+        @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
